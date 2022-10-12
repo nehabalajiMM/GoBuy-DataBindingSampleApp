@@ -9,6 +9,10 @@ apply plugin: 'kotlin-kapt'
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
 
+  dataBinding {
+    enabled true
+  }
+
   defaultConfig {
     applicationId "com.raywenderlich.android.gobuy"
     minSdkVersion rootProject.ext.minSdkVersion
@@ -24,8 +28,6 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-
-  // TODO: Enable data binding here
 }
 
 dependencies {
